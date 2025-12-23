@@ -1,0 +1,11 @@
+Html elements===
+
+1. block elemetns
+2. inline elemetns
+3. header elemetns ==>>h1-h6
+4. text elemetns ==>>h1-h6. p. span, caption etc
+5. semeactic elemetns ==>>
+    nav, header, footer, div, section, address, article etc
+6. form elements = >> form, lable, input etc
+7. list elements = >> 
+    ul, li, ol, dl etc

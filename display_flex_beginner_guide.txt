@@ -1,0 +1,253 @@
+CSS DISPLAY PROPERTY & FLEXBOX – BEGINNER FRIENDLY GUIDE
+
+--------------------------------------------------
+1. WHAT IS THE DISPLAY PROPERTY?
+--------------------------------------------------
+The display property defines how an HTML element is shown on the page
+and how it interacts with other elements.
+
+Common display values:
+- block
+- inline
+- inline-block
+- none
+- flex
+- grid
+
+Among these, FLEX is one of the most powerful and commonly used for layouts.
+
+--------------------------------------------------
+2. WHAT IS DISPLAY: FLEX?
+--------------------------------------------------
+display: flex turns an element into a FLEX CONTAINER.
+All its direct children become FLEX ITEMS.
+
+Flexbox is designed for:
+- One-dimensional layouts (row OR column)
+- Aligning items easily
+- Responsive layouts
+
+Example:
+.container {
+  display: flex;
+}
+
+--------------------------------------------------
+3. WHY USE FLEXBOX?
+--------------------------------------------------
+Use Flexbox when you want to:
+- Align items horizontally or vertically
+- Center items easily
+- Create responsive layouts
+- Control spacing between items
+- Reorder elements without changing HTML
+
+Flexbox solves many problems that were hard with floats or positioning.
+
+--------------------------------------------------
+4. FLEX CONTAINER PROPERTIES (MOST IMPORTANT)
+--------------------------------------------------
+
+4.1 flex-direction
+------------------
+Controls the main direction of items.
+
+Values:
+- row (default) → left to right
+- column → top to bottom
+- row-reverse
+- column-reverse
+
+When to use:
+- row: navigation bars, horizontal lists
+- column: sidebars, vertical layouts
+
+Example:
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+--------------------------------------------------
+4.2 justify-content
+------------------
+Aligns items along the MAIN AXIS.
+
+Values:
+- flex-start
+- center
+- flex-end
+- space-between
+- space-around
+- space-evenly
+
+When to use:
+- center items horizontally
+- create equal spacing
+
+Example:
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+--------------------------------------------------
+4.3 align-items
+------------------
+Aligns items along the CROSS AXIS.
+
+Values:
+- stretch (default)
+- center
+- flex-start
+- flex-end
+- baseline
+
+When to use:
+- vertical centering
+- aligning items with different heights
+
+Example:
+.container {
+  display: flex;
+  align-items: center;
+}
+
+--------------------------------------------------
+4.4 gap
+------------------
+Controls spacing between flex items.
+
+Why use:
+- Cleaner than margin hacks
+- Easier spacing control
+
+Example:
+.container {
+  display: flex;
+  gap: 16px;
+}
+
+--------------------------------------------------
+4.5 flex-wrap
+------------------
+Controls whether items wrap to next line.
+
+Values:
+- nowrap (default)
+- wrap
+- wrap-reverse
+
+When to use:
+- responsive layouts
+- cards that should move to next line
+
+Example:
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+--------------------------------------------------
+5. FLEX ITEM PROPERTIES
+--------------------------------------------------
+
+5.1 flex-grow
+------------------
+Controls how much an item grows compared to others.
+
+Example:
+.item {
+  flex-grow: 1;
+}
+
+Use when:
+- you want equal-width columns
+- fill remaining space
+
+--------------------------------------------------
+5.2 flex-shrink
+------------------
+Controls how items shrink when space is small.
+
+Example:
+.item {
+  flex-shrink: 0;
+}
+
+Use when:
+- preventing items from shrinking
+
+--------------------------------------------------
+5.3 flex-basis
+------------------
+Defines the starting size of an item.
+
+Example:
+.item {
+  flex-basis: 200px;
+}
+
+--------------------------------------------------
+5.4 flex (shorthand)
+------------------
+Combines grow, shrink, and basis.
+
+Example:
+.item {
+  flex: 1;
+}
+
+Meaning:
+flex: 1 → grow = 1, shrink = 1, basis = 0
+
+--------------------------------------------------
+5.5 align-self
+------------------
+Overrides align-items for a single item.
+
+Example:
+.item {
+  align-self: flex-end;
+}
+
+--------------------------------------------------
+6. WHEN TO USE DISPLAY: FLEX
+--------------------------------------------------
+Use Flexbox when:
+- Aligning items in a row or column
+- Centering content (very easy with flex)
+- Navigation bars
+- Cards layout
+- Toolbars
+- Simple responsive designs
+
+--------------------------------------------------
+7. WHEN NOT TO USE FLEX
+--------------------------------------------------
+Avoid Flexbox when:
+- You need complex 2D layouts → use CSS Grid
+- You are positioning single elements → use positioning
+- You only need text alignment → use text-align
+
+--------------------------------------------------
+8. COMMON FLEX CENTERING PATTERN
+--------------------------------------------------
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+This centers content both horizontally and vertically.
+
+--------------------------------------------------
+9. BEGINNER BEST PRACTICES
+--------------------------------------------------
+- Always apply display: flex to the parent
+- Keep layouts simple
+- Use gap instead of margins when possible
+- Combine flex with media queries for responsiveness
+
+--------------------------------------------------
+END OF FILE
