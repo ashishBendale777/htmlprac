@@ -66,10 +66,55 @@
             margin-top: 10px;
         }
 
+        #feture {
+            display: flex;
+            gap: 20px;
+            /* padding: 20px; */
+        }
+
         .feture-item {
-            background-color: red;
-            border: 4px solid green;
+            /* background-color: red; */
+            border: 2px solid green;
             border-radius: 30px;
+            padding: 20px;
+            height: 350px;
+        }
+
+        #service {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card-item {
+            border: 2px solid blue;
+            border-radius: 20px;
+            padding: 20px;
+        }
+        .card-item{
+            height: 400px;
+        }
+
+        .card-item ul{
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+            margin-top: 10px;
+        }
+
+        .card-item h3{
+            text-align: center;
+            margin-top: 10px;
+            font-size: 30px;
+        }
+        .card-item ul li{
+            list-style: none;
+            color: purple;    
+        }
+        .card-item img {
+            width: 100%;
+            height: 200px;
+
         }
     </style>
 </head>
@@ -87,7 +132,7 @@
         <h1>Home Page</h1>
     </section>
 
-    <section id="#feture">
+    <section id="feture">
         <!-- item 1 -->
         <div class="feture-item">
             <h2>Job Placement</h2>
@@ -124,6 +169,7 @@
             </p>
         </div>
     </section>
+
     <section id="about">
         <div class="about-container">
             <h1>About Us</h1>
@@ -154,7 +200,45 @@
     </section>
 
     <section id="service">
-        <h1>Service Page</h1>
+        <div class="card-item">
+            <img src="./images/java.png" alt="JAVA">
+            <h3>Java</h3>
+            <ul>
+                <li>Best Language</li>
+                <li>Best Language</li>
+                <li>Best Language</li>
+            </ul>
+        </div>
+
+        <div class="card-item">
+            <img src="./images/ic_py.png" alt="JAVA">
+            <h3>Python</h3>
+            <ul>
+                <li>Best Language</li>
+                <li>Best Language</li>
+                <li>Best Language</li>
+            </ul>
+        </div>
+
+        <div class="card-item">
+            <img src="./images/js.png" alt="JAVA">
+            <h3>Java</h3>
+            <ul>
+                <li>Best Language</li>
+                <li>Best Language</li>
+                <li>Best Language</li>
+            </ul>
+        </div>
+
+        <div class="card-item">
+            <img src="./images/kt.png" alt="JAVA">
+            <h3>Java</h3>
+            <ul>
+                <li>Best Language</li>
+                <li>Best Language</li>
+                <li>Best Language</li>
+            </ul>
+        </div>
     </section>
 </body>
 
