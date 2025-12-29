@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         * {
             margin: 0;
@@ -154,7 +157,7 @@
             border: none;
             padding: 10px;
             font-size: 12px;
-            font-weight: bold;    
+            font-weight: bold;
         }
 
         /* .bg-none{
@@ -175,6 +178,38 @@
             border-radius: 50%;
             border: 5px solid orange;
         }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            height: 60vh;
+            background-color: green;
+            text-align: center;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon-container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        .footer-links {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        footer p{
+            text-align: center;
+            margin-top: 50px;
+        }
+        
     </style>
 </head>
 
@@ -317,6 +352,26 @@
             </ul>
         </div>
     </section>
+
+    <footer>
+        <div class="icon-container">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+        </div>
+        <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#service">Services</a></li>
+        </ul>
+        <p>
+            copyright © 2024 All rights reserved.
+        </p>
+    </footer>
 </body>
 
 </html>
