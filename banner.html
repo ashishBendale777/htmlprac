@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: red;
+        }
+
+        .banner-container {
+            height: 100%;
+            width: 100%;
+        }
+
+        .banner-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .banner-container .banner-info {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(209, 81, 81, 0.3);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner-container">
+        <img src="./images/homebanner.jpg" alt="Banner" />
+        <div class="banner-info">
+            <h1>Welcome To My City</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis delectus voluptas laudantium ad quas
+                odit, vitae dolore facilis culpa autem in aspernatur soluta </p>
+            <button>Explore Now</button>
+        </div>
+    </div>
+</body>
+
+</html>
