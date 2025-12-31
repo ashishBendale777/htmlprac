@@ -16,7 +16,7 @@
         body {
             height: 100vh;
             width: 100vw;
-            background-color: red;
+            /* background-color: red; */
         }
 
         .banner-container {
@@ -46,6 +46,54 @@
             align-items: center;
             justify-content: center;
         }
+
+        .card-container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            /* background-color: red; */
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card-item {
+            position: relative;
+            height: 60%;
+            flex: 1;
+            border: 5px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+        }
+
+
+        .card-item img {
+            height: 200px;
+            width: 200px;
+        }
+        .card-overlay{
+            background-color: green;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 12px;
+            opacity: 0;
+        }
+
+        .card-item:hover .card-overlay{
+            opacity: 1;
+            transition: opacity 3.3s ease-in-out;
+        }
     </style>
 </head>
 
@@ -57,6 +105,44 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis delectus voluptas laudantium ad quas
                 odit, vitae dolore facilis culpa autem in aspernatur soluta </p>
             <button>Explore Now</button>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card-item">
+            <img src="./images/ic_py.png" alt="">
+            <div class="card-overlay">
+                <h2>Python</h2>
+                <p>Learn Python from scratch with hands-on examples and projects.</p>
+            </div>
+        </div>
+
+        <div class="card-item">
+            <img src="./images/ic_py.png" alt="">
+
+            <div class="card-overlay">
+                <h2>Python</h2>
+                <p>Learn Python from scratch with hands-on examples and projects.</p>
+            </div>
+        </div>
+
+        <div class="card-item">
+            <img src="./images/ic_py.png" alt="">
+
+
+            <div class="card-overlay">
+                <h2>Python</h2>
+                <p>Learn Python from scratch with hands-on examples and projects.</p>
+            </div>
+        </div>
+
+        <div class="card-item">
+            <img src="./images/ic_py.png" alt="">
+
+            <div class="card-overlay">
+                <h2>Python</h2>
+                <p>Learn Python from scratch with hands-on examples and projects.</p>
+            </div>
         </div>
     </div>
 </body>
