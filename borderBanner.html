@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            /* background-color: red; */
+        }
+
+        .banner-container {
+            height: 100%;
+            width: 100%;
+        }
+
+        .banner-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .border-box {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            height: 80%;
+            width: 80%;
+            border: 10px solid blue;
+            /* box-sizing: border-box; */
+        }
+
+        .border-box .box-content {
+            position: absolute;
+            right: 0;
+            top: 20%;
+            height: 60%;
+            width: 50%;
+            background-color: rgba(255, 255, 255, 0.7);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card-container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            /* background-color: red; */
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card-item {
+            position: relative;
+            height: 60%;
+            flex: 1;
+            border: 5px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+        }
+
+
+        .card-item img {
+            height: 200px;
+            width: 200px;
+        }
+        .card-overlay{
+            background-color: green;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 12px;
+            opacity: 0;
+        }
+
+        .card-item:hover .card-overlay{
+            opacity: 1;
+            transition: opacity 3.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner-container">
+        <img src="./images/homebanner.jpg" alt="Banner" />
+        <div class="border-box">
+            <div class="box-content">
+                <h1>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing 
+                </h1>
+                <div class="icon-container">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="card-container">
+        <div class="card-item">
+            <img src="./images/ic_py.png" alt="">
+            <div class="card-overlay">
+                <h2>Python</h2>
+                <p>Learn Python from scratch with hands-on examples and projects.</p>
+            </div>
+        </div>
+
+        <div class="card-item">
+            <img src="./images/ic_py.png" alt="">
+
+            <div class="card-overlay">
+                <h2>Python</h2>
+                <p>Learn Python from scratch with hands-on examples and projects.</p>
+            </div>
+        </div>
+
+        <div class="card-item">
+            <img src="./images/ic_py.png" alt="">
+
+
+            <div class="card-overlay">
+                <h2>Python</h2>
+                <p>Learn Python from scratch with hands-on examples and projects.</p>
+            </div>
+        </div>
+
+        <div class="card-item">
+            <img src="./images/ic_py.png" alt="">
+
+            <div class="card-overlay">
+                <h2>Python</h2>
+                <p>Learn Python from scratch with hands-on examples and projects.</p>
+            </div>
+        </div>
+    </div> -->
+</body>
+
+</html>
