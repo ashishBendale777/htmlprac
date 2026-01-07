@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                "box-a box-a box-b box-e"
+                "box-c box-d box-b box-e";
+            gap: 30px;
+            height: 100%;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .box {
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }   
+
+        .box-a {
+            grid-area: box-a;
+        }
+
+        .box-b {
+            grid-area: box-b;
+        }
+
+        .box-c {
+            grid-area: box-c;
+        }
+
+        .box-d {
+            grid-area: box-d;
+        }
+
+        .box-e {
+            grid-area: box-e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="box box-a">
+            <img src="./images/ic_py.png" alt="">
+        </div>
+
+        <div class="box box-b">
+            Box B
+        </div>
+
+        <div class="box box-c">
+            Box C
+        </div>
+        <div class="box box-d">
+            Box D
+        </div>
+
+        <div class="box box-e">
+            Box E
+        </div>
+</body>
+
+</html>
