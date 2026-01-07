@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>CSS Pseudo-Classes – Complete Form Demo</title>
+
+<style>
+/* ========== ROOT ========== */
+:root {
+  --primary: #2563eb;
+  --danger: #dc2626;
+  --success: #16a34a;
+  --border: #d1d5db;
+  font-family: Arial, sans-serif;
+}
+
+/* ========== BASE ========== */
+body {
+  background: #f9fafb;
+  padding: 40px;
+}
+
+form {
+  max-width: 800px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+/* focus-within */
+form:focus-within {
+  box-shadow: 0 0 0 3px rgba(37,99,235,.2);
+}
+
+/* ========== FIELD GROUP ========== */
+.field {
+  margin-bottom: 18px;
+}
+
+/* first / last child */
+.field:first-child label {
+  color: var(--primary);
+}
+
+.field:last-child {
+  margin-bottom: 0;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+/* ========== INPUT STYLES ========== */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+/* hover */
+input:hover {
+  border-color: var(--primary);
+}
+
+/* focus */
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* placeholder-shown */
+input:placeholder-shown {
+  background: #fefce8;
+}
+
+/* required / optional */
+input:required {
+  border-left: 4px solid var(--primary);
+}
+
+input:optional {
+  border-left: 4px solid #9ca3af;
+}
+
+/* valid / invalid */
+input:valid {
+  border-color: var(--success);
+}
+
+input:invalid {
+  border-color: var(--danger);
+}
+
+/* read-only */
+input:read-only {
+  background: #e5e7eb;
+}
+
+/* disabled */
+input:disabled {
+  background: #f3f4f6;
+  cursor: not-allowed;
+}
+
+/* enabled */
+input:enabled {
+  background: #ffffff;
+}
+
+/* ========== CHECKBOX & RADIO ========== */
+.options {
+  display: flex;
+  gap: 20px;
+}
+
+/* checked */
+input[type="checkbox"]:checked + span,
+input[type="radio"]:checked + span {
+  color: var(--success);
+  font-weight: bold;
+}
+
+/* ========== RANGE ========== */
+input[type="range"]:active {
+  accent-color: var(--primary);
+}
+
+/* ========== BUTTONS ========== */
+button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* hover + active */
+button:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* ========== STRUCTURAL ========== */
+ul li:nth-child(odd) {
+  background: #f3f4f6;
+}
+
+ul li:not(:last-child) {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* empty */
+.note:empty {
+  display: none;
+}
+
+/* ========== TARGET ========== */
+#success:target {
+  background: #dcfce7;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+/* ========== HAS (modern browsers) ========== */
+.field:has(input[type="file"]) {
+  border: 1px dashed var(--primary);
+  padding: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<a href="#success">Submit (Target Demo)</a>
+
+<div id="success">✅ Form Submitted Successfully</div>
+
+<form>
+
+  <!-- TEXT -->
+  <div class="field">
+    <label>Full Name (text)</label>
+    <input type="text" placeholder="Enter name" required />
+  </div>
+
+  <!-- EMAIL -->
+  <div class="field">
+    <label>Email</label>
+    <input type="email" placeholder="email@example.com" required />
+  </div>
+
+  <!-- PASSWORD -->
+  <div class="field">
+    <label>Password</label>
+    <input type="password" required />
+  </div>
+
+  <!-- NUMBER -->
+  <div class="field">
+    <label>Age</label>
+    <input type="number" min="18" max="60" />
+  </div>
+
+  <!-- TEL -->
+  <div class="field">
+    <label>Phone</label>
+    <input type="tel" placeholder="9876543210" />
+  </div>
+
+  <!-- URL -->
+  <div class="field">
+    <label>Website</label>
+    <input type="url" placeholder="https://example.com" />
+  </div>
+
+  <!-- DATE & TIME -->
+  <div class="field">
+    <label>Date</label>
+    <input type="date" />
+  </div>
+
+  <div class="field">
+    <label>Time</label>
+    <input type="time" />
+  </div>
+
+  <!-- COLOR -->
+  <div class="field">
+    <label>Favorite Color</label>
+    <input type="color" />
+  </div>
+
+  <!-- RANGE -->
+  <div class="field">
+    <label>Experience (range)</label>
+    <input type="range" min="10" max="30" />
+  </div>
+
+  <!-- FILE -->
+  <div class="field">
+    <label>Upload Resume</label>
+    <input type="file" />
+  </div>
+
+  <!-- RADIO -->
+  <div class="field">
+    <label>Gender</label>
+    <div class="options">
+      <label><input type="radio" name="g" value="M"/><span> Male</span></label>
+      <label><input type="radio" name="g" value="F" /><span> Female</span></label>
+    </div>
+  </div>
+
+  <!-- CHECKBOX -->
+  <div class="field">
+    <label>Skills</label>
+    <div class="options">
+      <label><input type="checkbox" /><span> React</span></label>
+      <label><input type="checkbox" /><span> Node</span></label>
+      <label><input type="checkbox" /><span> SQL</span></label>
+    </div>
+  </div>
+
+  <!-- SEARCH -->
+  <div class="field">
+    <label>Search</label>
+    <input type="search" placeholder="Search here..." />
+  </div>
+
+  <!-- READ ONLY -->
+  <div class="field">
+    <label>User ID (read-only)</label>
+    <input type="text" value="USR1029" readonly />
+  </div>
+
+  <!-- DISABLED -->
+  <div class="field">
+    <label>Disabled Field</label>
+    <input type="text" disabled value="Not editable" />
+  </div>
+
+  <!-- HIDDEN -->
+  <input type="hidden" value="internal-value" />
+
+  <!-- BUTTONS -->
+  <div class="field">
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    <button type="button">Button</button>
+  </div>
+
+</form>
+
+</body>
+</html>
