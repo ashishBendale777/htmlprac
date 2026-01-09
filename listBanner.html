@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            /* background-color: red; */
+        }
+
+        .banner-container {
+            height: 100%;
+            width: 100%;
+        }
+
+        .banner-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .banner-container .banner-info {
+            height: 100%;
+            width: 70%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            /* background-color: rgba(209, 81, 81, 0.3); */
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: space-evenly;
+        }
+
+        .banner-info li {
+            list-style: none;
+            width: 50%;
+            /* background-color: red; */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .banner-info li:nth-child(1) {
+            align-self: flex-end;
+        }
+
+        .banner-info li:nth-child(5) {
+            align-self: flex-end;
+        }
+
+        .banner-info li:nth-child(even) {
+            align-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner-container">
+        <img src="./images/homebanner.jpg" alt="Banner" />
+        <ul class="banner-info">
+            <li>
+                <h1>Painting</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+            </li>
+
+            <li>
+                <h1>Painting</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+            </li>
+
+            <li>
+                <h1>Painting</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+            </li>
+
+            <li>
+                <h1>Painting</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+            </li>
+
+            <li>
+                <h1>Painting</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+            </li>
+        </ul>
+    </div>
+
+
+    </div>
+</body>
+
+</html>
