@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Media Query 0 to Hero</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* =======================
+           GLOBAL STYLES
+        ======================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fb;
+        }
+
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+
+        /* =======================
+           NAVBAR (Flexbox)
+        ======================== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: #1e293b;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* =======================
+           HERO BANNER
+        ======================== */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 40px;
+            background: linear-gradient(120deg, #2563eb, #1e40af);
+            color: white;
+        }
+
+        .hero-text {
+            max-width: 500px;
+        }
+
+        .hero img {
+            width: 400px;
+        }
+
+        /* =======================
+           FEATURES (Grid)
+        ======================== */
+        .features {
+            padding: 50px 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* =======================
+           FORM
+        ======================== */
+        .contact {
+            padding: 50px 40px;
+            background: #e2e8f0;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea, button {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* =======================
+           MEDIA QUERIES
+        ======================== */
+
+        /* TABLET */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero img {
+                width: 300px;
+                margin-top: 20px;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 576px) {
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+            }
+
+            .hero {
+                padding: 40px 20px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            form {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>MyWebsite</h2>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">Contact</a>
+    </div>
+</div>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Learn Media Queries</h1>
+        <p>Build responsive websites that work on mobile, tablet, and desktop.</p>
+    </div>
+    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Banner">
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+    <h2>Our Features</h2>
+    <div class="grid">
+        <div class="card">📱 Mobile Friendly</div>
+        <div class="card">💻 Desktop Ready</div>
+        <div class="card">⚡ Fast Performance</div>
+        <div class="card">🎨 Modern UI</div>
+        <div class="card">🔒 Secure</div>
+        <div class="card">🚀 Scalable</div>
+    </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="contact">
+    <h2 style="text-align:center">Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button>Submit</button>
+    </form>
+</section>
+
+</body>
+</html>

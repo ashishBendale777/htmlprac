@@ -90,9 +90,14 @@
         }
 
         .card-item {
-            border: 2px solid blue;
-            border-radius: 20px;
-            padding: 20px;
+            /* From https://css.glass */
+            background: rgba(115, 62, 232, 0.39);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(9px);
+            -webkit-backdrop-filter: blur(9px);
+            
+            border: 1px solid rgba(115, 62, 232, 0.14);
             height: 400px;
 
         }
@@ -198,6 +203,7 @@
             margin-bottom: 20px;
             color: white;
         }
+
         .footer-links {
             display: flex;
             gap: 30px;
@@ -205,11 +211,10 @@
             margin-bottom: 20px;
         }
 
-        footer p{
+        footer p {
             text-align: center;
             margin-top: 50px;
         }
-        
     </style>
 </head>
 

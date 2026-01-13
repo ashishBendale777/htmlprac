@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: blue;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .wave-container {
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        .itop {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+        }
+
+        .ibottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;            
+        }
+
+        .content {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="wave-container">
+        <img src="./images/top.png" class="itop" alt="">
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptatibus quam blanditiis ipsam
+                voluptates magni asperiores. Incidunt, sapiente alias dignissimos, animi.
+            </p>
+        </div>
+        <img src="./images/bottom.png" class="ibottom" alt="">
+    </div>
+</body>
+
+</html>
