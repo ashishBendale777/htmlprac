@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Theme System – Full Demo</title>
+
+  <style>
+    /* =====================================================
+       1. BASE THEME (DESIGN TOKENS)
+    ===================================================== */
+
+    :root {
+      /* Brand Colors */
+      --color-primary: #2563eb;
+      --color-primary-hover: #1e4ed8;
+      --color-primary-active: #1e40af;
+
+      --color-secondary: #64748b;
+      --color-accent: #f59e0b;
+
+      /* Backgrounds */
+      --color-bg: #f8fafc;
+      --color-surface: #ffffff;
+
+      /* Text */
+      --color-text: #0f172a;
+      --color-muted: #64748b;
+
+      /* Borders & Effects */
+      --color-border: #e2e8f0;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 6px 16px rgba(0,0,0,0.12);
+
+      /* Radius */
+      --radius-sm: 4px;
+      --radius-md: 8px;
+
+      /* Spacing */
+      --space-xs: 4px;
+      --space-sm: 8px;
+      --space-md: 16px;
+      --space-lg: 24px;
+    }
+
+    /* =====================================================
+       2. DARK THEME OVERRIDES
+    ===================================================== */
+
+    [data-theme="dark"] {
+      --color-bg: #020617;
+      --color-surface: #020617;
+      --color-text: #e5e7eb;
+      --color-muted: #9ca3af;
+      --color-border: #1e293b;
+
+      --color-primary: #38bdf8;
+      --color-primary-hover: #0ea5e9;
+      --color-primary-active: #0284c7;
+    }
+
+    /* =====================================================
+       3. GLOBAL BASE STYLES
+    ===================================================== */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: var(--space-lg);
+    }
+
+    /* =====================================================
+       4. CARD / SURFACE
+    ===================================================== */
+
+    .card {
+      background-color: var(--color-surface);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-md);
+      margin-bottom: var(--space-lg);
+    }
+
+    /* =====================================================
+       5. BUTTONS (ALL STATES)
+    ===================================================== */
+
+    .btn {
+      padding: var(--space-sm) var(--space-md);
+      border-radius: var(--radius-md);
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background-color: var(--color-primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-primary-hover);
+    }
+
+    .btn-primary:active {
+      background-color: var(--color-primary-active);
+    }
+
+    .btn-primary:focus-visible {
+      outline: 3px solid var(--color-accent);
+    }
+
+    .btn-primary:disabled {
+      background-color: var(--color-border);
+      color: var(--color-muted);
+      cursor: not-allowed;
+    }
+
+    .btn-secondary {
+      background-color: var(--color-secondary);
+      color: white;
+    }
+
+    /* =====================================================
+       6. FORM ELEMENTS
+    ===================================================== */
+
+    label {
+      display: block;
+      margin-bottom: var(--space-xs);
+      font-weight: 600;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: var(--space-sm);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--color-border);
+      background-color: var(--color-surface);
+      color: var(--color-text);
+      margin-bottom: var(--space-md);
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: var(--color-primary);
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(37,99,235,0.25);
+    }
+
+    /* =====================================================
+       7. TEXT HELPERS
+    ===================================================== */
+
+    .text-muted {
+      color: var(--color-muted);
+    }
+
+    .accent {
+      color: var(--color-accent);
+      font-weight: 600;
+    }
+
+    /* =====================================================
+       8. THEME SWITCH (CSS ONLY)
+    ===================================================== */
+
+    .theme-switch {
+      display: flex;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-lg);
+    }
+
+    .theme-switch a {
+      text-decoration: none;
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--color-border);
+      color: var(--color-text);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>CSS Theme System</h1>
+    <p class="text-muted">
+      This file demonstrates a complete theme using semantic CSS variables.
+    </p>
+
+    <!-- THEME SWITCH (Manual via HTML attribute) -->
+    <div class="theme-switch">
+      <a href="#" onclick="document.documentElement.setAttribute('data-theme','light')">Light Theme</a>
+      <a href="#" onclick="document.documentElement.setAttribute('data-theme','dark')">Dark Theme</a>
+    </div>
+
+    <!-- CARD -->
+    <div class="card">
+      <h2>Buttons</h2>
+      <button class="btn btn-primary">Primary</button>
+      <button class="btn btn-primary" disabled>Disabled</button>
+      <button class="btn btn-secondary">Secondary</button>
+    </div>
+
+    <!-- FORM -->
+    <div class="card">
+      <h2>Form Elements</h2>
+
+      <label>Name</label>
+      <input type="text" placeholder="Enter your name" />
+
+      <label>Message</label>
+      <textarea rows="3"></textarea>
+
+      <button class="btn btn-primary">Submit</button>
+    </div>
+
+    <!-- TEXT -->
+    <div class="card">
+      <h2>Text Usage</h2>
+      <p>Main text uses <strong>--color-text</strong></p>
+      <p class="text-muted">Muted text uses --color-muted</p>
+      <p class="accent">Accent text draws attention</p>
+    </div>
+
+  </div>
+</body>
+</html>
